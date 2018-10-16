@@ -1,7 +1,11 @@
-import { spawn, SpawnOptions } from 'child_process'
 import chalk from 'chalk'
+import { spawn, SpawnOptions } from 'child_process'
 
-export async function execCommand (cmd: string, exitOnError = true, opts: SpawnOptions = {}): Promise<number> {
+export async function execCommand (
+  cmd: string,
+  exitOnError = true,
+  opts: SpawnOptions = {},
+): Promise<number> {
   return new Promise<number>((resolve, reject) => {
     console.log(`${chalk.grey('>>')} ${cmd}`)
 

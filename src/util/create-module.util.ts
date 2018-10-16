@@ -1,19 +1,17 @@
+import chalk from 'chalk'
+import * as cpx from 'cpx'
+import * as fs from 'fs-extra'
 import { Questions } from 'inquirer'
 import * as inquirer from 'inquirer'
-import * as fs from 'fs-extra'
 import * as Nunjucks from 'nunjucks'
-import * as cpx from 'cpx'
-import chalk from 'chalk'
-import { packageJsonTemplate } from '../tmpl/package.json.tmpl'
 import { tmplDir } from '../cnst/paths.cnst'
+import { packageJsonTemplate } from '../tmpl/package.json.tmpl'
 import { execCommand } from './exec.util'
 
 const DEFAULT_MODULE_DIR = process.cwd()
 // const DEFAULT_MODULE_DIR = process.cwd() + '/m' // uncomment to debug
 
-export const MODULE_TEMPLATES: string[] = [
-  'node-lib',
-]
+export const MODULE_TEMPLATES: string[] = ['node-lib']
 
 const YARN_DEV_DEPS: string[] = [
   '@naturalcycles/shared-module',
@@ -72,7 +70,6 @@ const QUESTIONS: Questions<Answers> = [
     choices: MODULE_TEMPLATES,
   },
 ]
-
 
 class CreateModuleUtil {
   async createModule (): Promise<void> {
@@ -206,4 +203,3 @@ class CreateModuleUtil {
 }
 
 export const createModuleUtil = new CreateModuleUtil()
-
