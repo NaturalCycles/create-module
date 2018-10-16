@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["dom", "es2017", "esnext"],
+    "sourceMap": false,
+    "outDir": "./dist",
+    "declaration": false,
+
+    "strict": true,
+
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "allowSyntheticDefaultImports": true,
+
+    "importHelpers": true,
+
+    "experimentalDecorators": true
+  },
+
+  "include": ["src"]
+}
