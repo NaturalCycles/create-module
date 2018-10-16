@@ -15,24 +15,29 @@
 
 - Generates new opinionated project from the _project template_. Currently supported templates:
   - `node-lib`: NodeJS library
-- Typescript setup
-- Follows the folders conventions of [@naturalcycles/shared-module](https://github.com/NaturalCycles/SharedModule)
-- Non-extendable configs
-  - `.gitgnore`
-  - `.editorconfig`
-  - `.codeclimate.yml`
-  - `tsconfig.json`, `tsconfig.test.json`
-- Extendable configs
-  - Jest
-  - Prettier
-  - TSLint
-  - Husky, Lint-staged
+  - more to come...
 - Template-based generation (based on interactive CLI answers)
   - `package.json`
   - `readme.md` with badges, CircleCI build status link
-- CircleCI build config
-- Adds predefined deps and devDeps to `package.json`, installs them with `yarn`
-- Does `git init`, `git add`, `git commit`
+- Adds predefined deps and devDeps (e.g `prettier`, `jest`, `typescript` etc.) to `package.json`, installs them with `yarn`
+- Typescript setup (`tsonfig.json`, etc)
+- Gets all the goodies from [@naturalcycles/shared-module](https://github.com/NaturalCycles/SharedModule):
+  - Folders conventions
+  - All yarn commands, e.g `prettier-all`, `build`, `bt`, `update-from-shared-module`, `test-ci`, `clean-dist`, etc
+  - DevDeps that are needed for these commands (`husky`, `lint-staged`, etc)
+  - Non-extendable configs
+    - `.gitgnore`
+    - `.editorconfig`
+    - `.codeclimate.yml`
+    - `tsconfig.json`, `tsconfig.test.json`
+  - Extendable configs
+    - Jest
+    - Prettier
+    - TSLint
+    - Husky, Lint-staged
+- CircleCI setup
+- CodeClimate setup (via `.codeclimate.yml` and CircleCI)
+- Git setup (`git init`, `git add`, `git commit`)
 
 ## TODO
 
