@@ -126,7 +126,7 @@ class CreateModuleUtil {
   }
 
   private async yarnAdd (answers: Answers): Promise<void> {
-    const cmd = [`yarn add`, ...YARN_DEV_DEPS].join(' ')
+    const cmd = [`yarn add -D`, ...YARN_DEV_DEPS].join(' ')
     await this.waitForEnterPressed(`Will do ${chalk.bold.green(cmd)}`)
 
     const opts = {
@@ -150,7 +150,7 @@ class CreateModuleUtil {
 
   private async copyTemplateFiles (answers: Answers): Promise<void> {
     const filesPath = `${tmplDir}/${answers.moduleTemplate}/files/**/{*,.*}`
-    await this.waitForEnterPressed(`Will copy template files from ${filesPath}`)
+    await this.waitForEnterPressed(`Will copy template files from ${answers.moduleTemplate}/files`)
     await cpx.copy(filesPath, answers.moduleDir)
   }
 
