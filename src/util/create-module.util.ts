@@ -104,7 +104,7 @@ class CreateModuleUtil {
   }
 
   private async setupGit (answers: Answers): Promise<void> {
-    const cmd = `git init && git add -A && git commit -a -m "init project by create-module" && git status`
+    const cmd = `git init && git add -A && git commit -a -m "feat: init project by create-module" && git status`
     await this.waitForEnterPressed(`Will do ${chalk.bold.green(cmd)}`)
 
     const opts = {
