@@ -27,6 +27,7 @@
 /.sass-cache
 /.sourcemaps
 /.env
+/.npmrc
 
 /node_modules
 
@@ -34,10 +35,18 @@
 /report
 
 /dist
+/dist-cjs
+/dist-esm
 /tmp
+/deploy
+/build/deploy
+
+# All secrets are ignored, except encrypted
+/secret/**/*.*
+!/secret/**/*.enc
 
 /src/@linked
-/src/scripts/try.*
+/scripts/try.*
 /logs
 /platforms
 /plugins

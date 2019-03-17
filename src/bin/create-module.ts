@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { createModuleUtil } from '../util/create-module.util'
+import { createModuleCommand } from '../util/create-module.command'
 
-createModuleUtil.createModule().catch(err => {
+createModuleCommand().catch(err => {
   console.error(err)
   process.exit(1)
 })

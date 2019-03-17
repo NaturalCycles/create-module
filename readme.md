@@ -7,14 +7,20 @@
 
 # Usage
 
+Create GitHub repository manually.
+
     mkdir my-new-module
     cd my-new-module
     npx @naturalcycles/create-module
+    
+    git push
+    
+    CircleCI > "Start building", cancel, add NPM_TOKEN, GH_TOKEN, restart Workflow
 
 # Features
 
 - Generates new opinionated project from the _project template_. Currently supported templates:
-  - `node-lib`: NodeJS library
+  - `nodejs-lib`: NodeJS library
   - more to come...
 - Template-based generation (based on interactive CLI answers)
   - `package.json`

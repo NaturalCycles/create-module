@@ -1,29 +1,29 @@
 {
   "name": "@naturalcycles/create-module",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "scripts": {
-    "debug-create-module": "ts-node ./src/bin/create-module"
+    "debug-create-module": "tsn ./src/bin/create-module --debug"
   },
   "dependencies": {
-    "chalk": "^2.4.1",
-    "cpx": "^1.5.0",
+    "ansi-colors": "^3.2.4",
     "fs-extra": "^7.0.0",
-    "inquirer": "^6.2.0",
-    "nunjucks": "^3.1.3"
+    "inquirer": "^6.2.2",
+    "kpy": "^1.6.0",
+    "nunjucks": "^3.1.3",
+    "yargs": "^13.2.2"
   },
   "devDependencies": {
-    "@naturalcycles/shared-module": "^1.0.21",
-    "@types/fs-extra": "^5.0.4",
-    "@types/inquirer": "^0.0.43",
-    "@types/node": "^10.11.7",
+    "@naturalcycles/semantic-release": "^1.0.0",
+    "@naturalcycles/shared-module": "^4.0.3",
+    "@types/inquirer": "^0.0.44",
+    "@types/node": "^11.11.3",
     "@types/nunjucks": "^3.1.0",
     "prettier": "^1.14.3",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.0.3",
     "tslint": "^5.11.0",
     "typescript": "^3.1.3"
   },
-  "peerDependencies": {},
   "files": [
     "dist",
     "tmpl"
@@ -32,8 +32,7 @@
     "create-module": "dist/bin/create-module.js"
   },
   "engines": {
-    "node": ">=8.9",
-    "yarn": ">=1.10.1"
+    "node": ">=8.9"
   },
   "repository": {
     "type": "git",

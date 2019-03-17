@@ -2,20 +2,15 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "commonjs",
-    "lib": ["dom", "es2018", "esnext"],
-    "sourceMap": false,
+    "lib": ["dom", "es2018"],
+    "sourceMap": true,
+    "declaration": true,
     "outDir": "./dist",
-    "declaration": false,
-
     "strict": true,
-
+    "suppressImplicitAnyIndexErrors": true,
     "moduleResolution": "node",
     "rootDir": "./src",
-
-    "importHelpers": true,
-
     "experimentalDecorators": true
   },
-
   "include": ["src"]
 }
