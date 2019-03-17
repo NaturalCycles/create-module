@@ -38,9 +38,12 @@
   "engines": {
     "node": ">=8.9"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com/NaturalCycles/create-module.git"
+    "url": "https://github.com/NaturalCycles/create-module"
   },
   "author": "Natural Cycles Team",
   "license": "MIT"
