@@ -1,12 +1,12 @@
-import * as fs from 'fs-extra'
 import * as c from 'ansi-colors'
+import * as fs from 'fs-extra'
 import { Questions } from 'inquirer'
+import * as inquirer from 'inquirer'
 import { kpy } from 'kpy'
 import * as Nunjucks from 'nunjucks'
+import * as yargs from 'yargs'
 import { tmplDir } from '../cnst/paths.cnst'
 import { execCommand } from './exec.util'
-import * as inquirer from 'inquirer'
-import * as yargs from 'yargs'
 
 export const MODULE_TEMPLATES: string[] = ['nodejs-lib']
 
@@ -100,17 +100,15 @@ const DEBUG_ANSWERS: Answers = {
 }
 
 export async function createModuleCommand (): Promise<void> {
-  let { moduleDir, debug } = yargs
-    .options({
-      moduleDir: {
-        type: 'string',
-        descr: 'Directory to create module in',
-      },
-      debug: {
-        type: 'boolean',
-      },
-    })
-    .argv
+  let { moduleDir, debug } = yargs.options({
+    moduleDir: {
+      type: 'string',
+      descr: 'Directory to create module in',
+    },
+    debug: {
+      type: 'boolean',
+    },
+  }).argv
 
   let answers: Answers
 
@@ -174,19 +172,19 @@ async function generatePackageJson (opt: Opt): Promise<void> {
     devDependencies: {},
     files: [
       'dist',
-      "src",
-      "!src/test",
-      "!src/**/*.test.ts",
-      "!src/**/__snapshots__",
-      "!src/**/__exclude",
+      'src',
+      '!src/test',
+      '!src/**/*.test.ts',
+      '!src/**/__snapshots__',
+      '!src/**/__exclude',
     ],
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    main: 'dist/index.js',
+    types: 'dist/index.d.ts',
     publishConfig: {
-      "access": "public", // todo: question
+      access: opt.npmAccess,
     },
-    "repository": {
-      type: "git",
+    repository: {
+      type: 'git',
       url: `https://github.com/${opt.githubFullName}`,
     },
     engines: {
@@ -236,7 +234,6 @@ async function yarnAdd (opt: Opt): Promise<void> {
   await execCommand(`yarn update-from-shared-module`, true, opts)
 }
 
-
 async function setupGit (opt: Opt): Promise<void> {
   const cmd = [
     `git init`,
@@ -266,7 +263,7 @@ function nunjucks (): typeof Nunjucks {
   return nun
 }
 
-async function waitForEnterPressed (message = ''): Promise<void> {
+async function _waitForEnterPressed (message = ''): Promise<void> {
   await readline(['', message, c.grey('Press [ENTER] to proceed...'), ''].join('\n'))
 }
 
