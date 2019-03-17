@@ -5,7 +5,7 @@ import * as inquirer from 'inquirer'
 import { kpy } from 'kpy'
 import * as Nunjucks from 'nunjucks'
 import * as yargs from 'yargs'
-import { tmplDir } from '../cnst/paths.cnst'
+import { projectDir, tmplDir } from '../cnst/paths.cnst'
 import { execCommand } from './exec.util'
 
 export const MODULE_TEMPLATES: string[] = ['nodejs-lib']
@@ -64,12 +64,27 @@ const QUESTIONS: Questions<Answers> = [
   {
     name: 'npmModuleName',
     message: 'Module name (without scope), e.g `js-lib`',
-    // todo: validate with Joi schema
+    validate (npmModuleName: string, answers: Answers) {
+      Object.assign(answers, { npmModuleName })
+
+      console.log(`\n\nnpm package name will be:\n${getNPMFullName(answers)}\n`)
+
+      // todo: validate with Joi schema
+
+      return true
+    },
   },
   {
     name: 'githubOrg',
     message: 'GitHub Org / Author, e.g `NaturalCycles`',
     default: 'NaturalCycles',
+    validate (githubOrg: string, answers: Answers) {
+      console.log(`\n\nGitHub full repo will be:\n${githubOrg}/${answers.npmModuleName}\n`)
+
+      // todo: validate with Joi schema
+
+      return true
+    },
   },
   {
     name: 'moduleAuthor',
@@ -100,6 +115,9 @@ const DEBUG_ANSWERS: Answers = {
 }
 
 export async function createModuleCommand (): Promise<void> {
+  const { version } = require(`${projectDir}/package.json`)
+  console.log(`\n\ncreate-module@${c.green.bold(version)}\n\n`)
+
   let { moduleDir, debug } = yargs.options({
     moduleDir: {
       type: 'string',
@@ -143,10 +161,14 @@ function createOptFromAnswers (answers: Answers, cfg: TemplateConfig, moduleDir:
     ...answers,
     ...cfg,
     moduleDir,
-    npmFullName: [answers.npmScope, answers.npmModuleName].filter(t => t).join('/'),
+    npmFullName: getNPMFullName(answers),
     githubFullName: `${answers.githubOrg}/${answers.npmModuleName}`,
     circleCiStatusToken: '123', // todo
   }
+}
+
+function getNPMFullName (answers: Answers): string {
+  return [answers.npmScope, answers.npmModuleName].filter(t => t).join('/')
 }
 
 /**
