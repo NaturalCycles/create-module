@@ -143,7 +143,7 @@ function createOptFromAnswers (answers: Answers, cfg: TemplateConfig, moduleDir:
     ...answers,
     ...cfg,
     moduleDir,
-    npmFullName: `${answers.npmScope}/${answers.npmModuleName}`,
+    npmFullName: [answers.npmScope, answers.npmModuleName].filter(t => t).join('/'),
     githubFullName: `${answers.githubOrg}/${answers.npmModuleName}`,
     circleCiStatusToken: '123', // todo
   }
