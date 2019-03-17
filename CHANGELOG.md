@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/NaturalCycles/create-module/compare/v1.0.0...v1.0.1) (2019-03-17)
+
+
+### Bug Fixes
+
+* case with no scope ([a897962](https://github.com/NaturalCycles/create-module/commit/a897962))
+
 # 1.0.0 (2019-03-17)
 
 
