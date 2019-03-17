@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/NaturalCycles/create-module/compare/v1.0.1...v1.1.0) (2019-03-17)
+
+
+### Features
+
+* display intermediate results and version ([633ae99](https://github.com/NaturalCycles/create-module/commit/633ae99))
+
 ## [1.0.1](https://github.com/NaturalCycles/create-module/compare/v1.0.0...v1.0.1) (2019-03-17)
 
 
