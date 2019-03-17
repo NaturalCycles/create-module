@@ -2,8 +2,9 @@
 
 > `npx @naturalcycles/create-module` to bootstrap a new module
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![npm](https://img.shields.io/npm/v/@naturalcycles/create-module/latest.svg)](https://www.npmjs.com/package/@naturalcycles/create-module)
 [![](https://circleci.com/gh/NaturalCycles/create-module.svg?style=shield&circle-token=cbb20b471eb9c1d5ed975e28c2a79a45671d78ea)](https://circleci.com/gh/NaturalCycles/create-module)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 # Usage
 
@@ -12,9 +13,9 @@ Create GitHub repository manually.
     mkdir my-new-module
     cd my-new-module
     npx @naturalcycles/create-module
-    
+
     git push
-    
+
     CircleCI > "Start building", cancel, add NPM_TOKEN, GH_TOKEN, restart Workflow
 
 # Features
