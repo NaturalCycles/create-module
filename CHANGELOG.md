@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/NaturalCycles/create-module/compare/v1.1.0...v1.2.0) (2019-04-20)
+
+
+### Features
+
+* upgrade shared-module ([e630287](https://github.com/NaturalCycles/create-module/commit/e630287))
+
 # [1.1.0](https://github.com/NaturalCycles/create-module/compare/v1.0.1...v1.1.0) (2019-03-17)
 
 
