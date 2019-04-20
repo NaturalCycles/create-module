@@ -15,8 +15,8 @@
   },
   "devDependencies": {
     "@naturalcycles/semantic-release": "^1.0.0",
-    "@naturalcycles/shared-module": "^4.0.3",
-    "@types/inquirer": "^0.0.44",
+    "@naturalcycles/shared-module": "^5.14.4",
+    "@types/inquirer": "^6.0.0",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.11.3",
     "@types/nunjucks": "^3.1.0",
