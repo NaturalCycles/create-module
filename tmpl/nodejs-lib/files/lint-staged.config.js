@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@naturalcycles/shared-module/cfg/lint-staged.config'),
+  ...require('@naturalcycles/dev-lib/cfg/lint-staged.config'),
 }

@@ -26,11 +26,13 @@ Create GitHub repository manually.
 - Template-based generation (based on interactive CLI answers)
   - `package.json`
   - `readme.md` with badges, CircleCI build status link
-- Adds predefined deps and devDeps (e.g `prettier`, `jest`, `typescript` etc.) to `package.json`, installs them with `yarn`
+- Adds predefined deps and devDeps (e.g `prettier`, `jest`, `typescript` etc.) to `package.json`,
+  installs them with `yarn`
 - Typescript setup (`tsonfig.json`, etc)
-- Gets all the goodies from [@naturalcycles/shared-module](https://github.com/NaturalCycles/SharedModule):
+- Gets all the goodies from [@naturalcycles/dev-lib](https://github.com/NaturalCycles/dev-lib):
   - Folders conventions
-  - All yarn commands, e.g `prettier-all`, `build`, `bt`, `update-from-shared-module`, `test-ci`, `clean-dist`, etc
+  - All yarn commands, e.g `prettier-all`, `build`, `bt`, `update-from-dev-lib`, `test-ci`,
+    `clean-dist`, etc
   - DevDeps that are needed for these commands (`husky`, `lint-staged`, etc)
   - Non-extendable configs
     - `.gitgnore`
@@ -54,4 +56,5 @@ Create GitHub repository manually.
 - Add more templates, e.g:
   - `js-lib` (universal js lib for both node and browser)
   - `browser-lib`
-  - `backend-service` (gets automatically deployed to the cloud, includes all server boilerplate, monitoring, analytics, etc.)
+  - `backend-service` (gets automatically deployed to the cloud, includes all server boilerplate,
+    monitoring, analytics, etc.)

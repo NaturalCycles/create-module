@@ -12,14 +12,13 @@ export const MODULE_TEMPLATES: string[] = ['nodejs-lib']
 
 const YARN_DEV_DEPS: string[] = [
   '@naturalcycles/semantic-release',
-  '@naturalcycles/shared-module',
+  '@naturalcycles/dev-lib',
   '@types/jest',
   '@types/node',
   'jest',
   'jest-junit',
   'prettier',
   'ts-jest',
-  'ts-node',
   'tslint',
   'typescript',
   // '',
@@ -253,7 +252,7 @@ async function yarnAdd (opt: Opt): Promise<void> {
 
   await execCommand(cmd, true, opts)
 
-  await execCommand(`yarn update-from-shared-module`, true, opts)
+  await execCommand(`yarn update-from-dev-lib`, true, opts)
 }
 
 async function setupGit (opt: Opt): Promise<void> {
