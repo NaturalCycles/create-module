@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/NaturalCycles/create-module/compare/v1.2.0...v1.3.0) (2019-05-02)
+
+
+### Bug Fixes
+
+* import path ([7410af1](https://github.com/NaturalCycles/create-module/commit/7410af1))
+
+
+### Features
+
+* update to dev-lib, fs-lib ([95b86c9](https://github.com/NaturalCycles/create-module/commit/95b86c9))
+
 # [1.2.0](https://github.com/NaturalCycles/create-module/compare/v1.1.0...v1.2.0) (2019-04-20)
 
 
