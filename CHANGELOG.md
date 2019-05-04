@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/NaturalCycles/create-module/compare/v1.3.0...v1.4.0) (2019-05-04)
+
+
+### Features
+
+* update deps ([9808683](https://github.com/NaturalCycles/create-module/commit/9808683))
+
 # [1.3.0](https://github.com/NaturalCycles/create-module/compare/v1.2.0...v1.3.0) (2019-05-02)
 
 
