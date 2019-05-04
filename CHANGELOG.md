@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/NaturalCycles/create-module/compare/v1.4.0...v1.5.0) (2019-05-04)
+
+
+### Features
+
+* remove unneeded file ([57e4492](https://github.com/NaturalCycles/create-module/commit/57e4492))
+
 # [1.4.0](https://github.com/NaturalCycles/create-module/compare/v1.3.0...v1.4.0) (2019-05-04)
 
 
