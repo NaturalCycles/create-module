@@ -13,14 +13,8 @@ export const MODULE_TEMPLATES: string[] = ['nodejs-lib']
 const YARN_DEV_DEPS: string[] = [
   '@naturalcycles/semantic-release',
   '@naturalcycles/dev-lib',
-  '@types/jest',
   '@types/node',
   'jest',
-  'jest-junit',
-  'prettier',
-  'ts-jest',
-  'tslint',
-  'typescript',
   // '',
 ]
 

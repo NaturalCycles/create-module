@@ -1,6 +1,3 @@
-//
-// tsconfig.json for /scripts
-//
 {
   "extends": "@naturalcycles/dev-lib/scripts/tsconfig.json",
   "exclude": ["**/__exclude", "**/@linked"]
