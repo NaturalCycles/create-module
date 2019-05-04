@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/NaturalCycles/create-module/compare/v1.5.0...v1.5.1) (2019-05-04)
+
+
+### Bug Fixes
+
+* move setupJest.ts ([539d2b7](https://github.com/NaturalCycles/create-module/commit/539d2b7))
+
 # [1.5.0](https://github.com/NaturalCycles/create-module/compare/v1.4.0...v1.5.0) (2019-05-04)
 
 
