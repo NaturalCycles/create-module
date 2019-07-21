@@ -1,6 +1,6 @@
 {
   "name": "@naturalcycles/create-module",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "",
   "scripts": {
     "debug-create-module": "tsn ./src/bin/create-module --debug"
